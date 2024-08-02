@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate  } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './UploadResume.css';
 
 const Api_URL = "https://7fdkv4-5000.csb.app";
@@ -16,15 +16,15 @@ const UploadResume = () => {
         try {
             const token = localStorage.getItem('auth-token');
             console.log('Token:', token); // Check token value
-    
-            const response = await fetch(Api_URL + `/upload`, {
+
+            const response = await fetch(`https://7fdkv4-5000.csb.app/upload`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`, // Ensure token is in correct format
                 },
                 body: formData
             });
-    
+
             console.log('Response:', response);
             const responseData = await response.json();
             if (response.ok) {
@@ -41,19 +41,19 @@ const UploadResume = () => {
 
     return (
         <div>
-             <nav className="navbar">
+            <nav className="navbar">
                 <div className="appName">
                     <span className="animatedRR">R</span>
                     <span className="mirrorI animatedRR">R</span>
                 </div>
                 <div className="navLinks">
-                    { <Link to="/" className="navLink">Home</Link>}
-                      </div>
+                    {<Link to="/" className="navLink">Home</Link>}
+                </div>
             </nav>
-        <form onSubmit={uploadHandler} className='form'>
-            <input type="file" onChange={(e) => setFile(e.target.files[0])} />
-            <button type="submit">Upload Resume</button>
-        </form>
+            <form onSubmit={uploadHandler} className='form'>
+                <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+                <button type="submit">Upload Resume</button>
+            </form>
         </div>
     );
 };
