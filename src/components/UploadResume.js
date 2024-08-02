@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate  } from 'react-router-dom';
 import './UploadResume.css';
 
-const Api_URL = "http://localhost:5000";
+const Api_URL = "https://7fdkv4-5000.csb.app";
 
 const UploadResume = () => {
     const [file, setFile] = useState(false);
