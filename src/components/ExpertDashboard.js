@@ -86,7 +86,7 @@ const ExpertDashboard = () => {
                     {resumes.map((resume) => (
                         <div className="resumeCard" key={resume._id}>
                               <h2>{resume.student?.name || 'Unknown Student'}</h2>
-                            <a href={`http://localhost:5000/${resume.resumeFile}`} target="_blank" rel="noopener noreferrer">
+                            <a href={`https://7fdkv4-5000.csb.app/${resume.resumeFile}`} target="_blank" rel="noopener noreferrer">
                                 View Resume
                             </a>
                             <textarea

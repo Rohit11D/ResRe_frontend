@@ -44,7 +44,7 @@ const ReviewResumes = () => {
             {resumes.map((resume) => (
                 <div key={resume._id}>
                     <h3>{resume.student.name}'s Resume</h3>
-                    <a href={`http://localhost:5000/${resume.resumeFile}`} target="_blank" rel="noopener noreferrer">
+                    <a href={`https://7fdkv4-5000.csb.app/${resume.resumeFile}`} target="_blank" rel="noopener noreferrer">
                         View Resume
                     </a>
                     <div>
