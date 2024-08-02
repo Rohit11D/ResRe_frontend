@@ -12,7 +12,7 @@ const ViewReviews = () => {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                     }
                 };
-                const { data } = await axiosInstance.get('/resume/myresumes', config);
+                const { data } = await axiosInstance.get('https://7fdkv4-5000.csb.app/resume/myresumes', config);
                 setResumes(data);
             } catch (error) {
                 console.error(error);
