@@ -17,11 +17,13 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     justify-content: center;
+    align-items: center;
 }
 
 .titleH1 {
     text-align: center;
-    color: #45A29E; /* Gold */
+    color: #45A29E;
+    /* Gold */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px;
     margin-top: 10px;
@@ -40,12 +42,13 @@ body {
 }
 
 .resumelist {
-    width: 100%;
+    width: 98%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     row-gap: 80px;
-    margin: auto;
+    align-items: center;
+
 }
 
 .resumeCard {
@@ -70,17 +73,18 @@ body {
 }
 
 .resumeCard a {
-    color: #56b2bb; /* Teal */
+    color: #56b2bb;
+    /* Teal */
     text-decoration: none;
     font-weight: bold;
-    border: 1px ;
+    border: 1px;
     /* box-shadow: 0 10px 30px #56b2bb; */
     border-radius: 100%;
     font-size: 1.3rem;
 }
 
 .resumeCard textarea {
-    width: 100%;
+    width: 98%;
     height: 100px;
     margin-top: 10px;
     border-radius: 8px;
@@ -98,7 +102,8 @@ body {
     margin-top: 10px;
     border: none;
     border-radius: 8px;
-    background-color: #56b2bb; /* Gold */
+    background-color: #56b2bb;
+    /* Gold */
     color: #FFFFFF;
     font-size: 1rem;
     cursor: pointer;
@@ -117,7 +122,8 @@ body {
 .reviews h3 {
     margin: 0;
     font-size: 1.25rem;
-    color: #56b2bb; /* Gold */
+    color: #56b2bb;
+    /* Gold */
 }
 
 .reviews .review {
@@ -144,12 +150,14 @@ body {
 @media (max-width: 900px) {
     .resumelist {
         grid-template-columns: repeat(2, 1fr);
+        width: 94%;
     }
 }
 
 @media (max-width: 600px) {
     .resumelist {
         grid-template-columns: 1fr;
+        width: 90%;
     }
 
     .resumeCard {
