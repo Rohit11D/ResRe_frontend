@@ -24,7 +24,7 @@ const App = () => {
                     <Route path="/reviews" element={<ReviewResumes />} />
                     <Route path="/my-reviews" element={<ViewReviews />} /> {/* Add the new route */}
                     {/* Add more routes as needed */}
-                    <Route path="/resume/:filename" element={<ResumeViewer />} />
+                    <Route path="/resume/:filename/:username" element={<ResumeViewer />} />
                     <Route path="/myresumes" element={<MyResumes />} />
                     <Route path="/ExpertDashboard" element={<ExpertDashboard />} />
                     <Route path='/StudentDashboard' element={<StudentDashboard />}></Route>

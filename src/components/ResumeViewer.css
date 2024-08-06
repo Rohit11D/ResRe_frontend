@@ -1,0 +1,23 @@
+.resumeViewerContent {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    margin: 20px;
+    margin-top: 40px;
+
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .resumeViewerContent embeded {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 90%;
+
+} */

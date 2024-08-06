@@ -83,32 +83,37 @@ const ExpertDashboard = () => {
                 <div>
                     {resumes.length > 0 ? (
                         <div className="resumelist">
-                            {resumes.map((resume) => (
-                                <div className="resumeCard" key={resume._id}>
-                                    <h2>{resume.student?.name || 'Unknown Student'}</h2>
-                                    <Link to={`/resume/${encodeURIComponent(resume.resumeFile)}`} target="_blank">
-                                        View Resume
-                                    </Link>
-                                    <textarea
-                                        value={selectedResumeId === resume._id ? review : ""}
-                                        onChange={(e) => {
-                                            setReview(e.target.value);
-                                            setSelectedResumeId(resume._id);
-                                        }}
-                                        placeholder="Write your review here..."
-                                    />
-                                    <button onClick={submitReview}>Submit Review</button>
-                                    <div className="reviews">
-                                        <h3>Reviews:</h3>
-                                        {resume.reviews.map((rev, index) => (
-                                            <div key={index} className="review">
-                                                <p>{rev.review}</p>
-                                                <small>By Expert: {rev.expert?.name || 'Unknown Expert'}</small>
-                                            </div>
-                                        ))}
+                            {resumes.map((resume) => {
+                                const username = resume.student?.name || 'Unknown Student';
+                                // console.log(username);
+                                return (
+                                    <div className="resumeCard" key={resume._id}>
+
+                                        <h2>{resume.student?.name || 'Unknown Student'}</h2>
+                                        <Link to={`/resume/${encodeURIComponent(resume.resumeFile)}/${encodeURIComponent(username)}`} target="_blank">
+                                            View Resume
+                                        </Link>
+                                        <textarea
+                                            value={selectedResumeId === resume._id ? review : ""}
+                                            onChange={(e) => {
+                                                setReview(e.target.value);
+                                                setSelectedResumeId(resume._id);
+                                            }}
+                                            placeholder="Write your review here..."
+                                        />
+                                        <button onClick={submitReview}>Submit Review</button>
+                                        <div className="reviews">
+                                            <h3>Reviews:</h3>
+                                            {resume.reviews.map((rev, index) => (
+                                                <div key={index} className="review">
+                                                    <p>{rev.review}</p>
+                                                    <small>By Expert: {rev.expert?.name || 'Unknown Expert'}</small>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
+                                )
+                            })}
                         </div>
                     ) : (
                         <p>No resumes available.</p>
