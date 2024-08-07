@@ -9,6 +9,7 @@ const StudentDashboard = () => {
                 <div className="appName">
                     <span className="animatedRR">R</span>
                     <span className="mirrorI animatedRR">R</span>
+                    <span className='simpleName'>ResumeRevamper</span>
                 </div>
                 <div className="navLinks">
                     { <Link to="/" className="navLink">Home</Link>}

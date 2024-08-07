@@ -159,7 +159,9 @@ body {
         grid-template-columns: 1fr;
         width: 90%;
     }
-
+    .simpleName{
+        display: none;
+    }
     .resumeCard {
         width: 100%;
         margin-bottom: 20px;

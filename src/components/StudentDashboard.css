@@ -136,3 +136,9 @@ body {
 .cardButton:active {
     background-color: #f0f0f0;
 }
+
+@media (max-width: 600px){
+    .simpleName{
+        display: none;
+    }
+}

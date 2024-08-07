@@ -9,18 +9,18 @@ const Home = () => {
         <div className="homeContainer">
             <nav className="navbar">
                 <div className="appName">
-                    
+
                     <span className="animatedRR">R</span>
                     <span className="mirrorI animatedRR">R</span>
-                    <span className='simpleName'>ResRe</span>
-                    
+                    <span className='simpleName'>ResumeRevamper</span>
+
                 </div>
-                
+
                 <div className="navLinks">
                     {!isAuthenticated && <Link to="/login" className="navLink">Login</Link>}
                     {!isAuthenticated && <Link to="/register" className="navLink">Sign Up</Link>}
                     {isAuthenticated && <a href="#" onClick={logout} className="navLink">Logout</a>}
-          
+
                 </div>
             </nav>
             <div className="header">
