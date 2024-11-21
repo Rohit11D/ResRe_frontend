@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Register.css'; // Ensure this import is correct
 
-const Api_URL = "https://7fdkv4-5000.csb.app";
+const Api_URL = "https://d8twdt-5000.csb.app";
 
 const Register = ({ history }) => {
     const [formData, setFormData] = useState({
@@ -27,11 +27,9 @@ const Register = ({ history }) => {
         }).then((response) => response.json()).then((data) => responseData = data);
         if (responseData.success) {
             localStorage.setItem('auth-token', responseData.token);
-            if (formData.role === 'expert') {
-                window.location.replace('/ExpertDashboard');
-            } else if (formData.role === 'student') {
-                window.location.replace('/StudentDashboard');
-            }
+           
+                window.location.replace('/login');
+            
         } else {
             alert(responseData.errors);
         }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './ResumeViewer.css';
 import { useAuth } from './AuthContext';
-const Api_URL = "https://7fdkv4-5000.csb.app";
+const Api_URL = "https://d8twdt-5000.csb.app";
 
 const ResumeViewer = () => {
     const { isAuthenticated, userRole, logout } = useAuth();
